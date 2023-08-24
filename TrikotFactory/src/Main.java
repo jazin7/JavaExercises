@@ -1,5 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        AbstractTrikotFactory trikotFactory = new PORTrikotFactory();
+
+        Trikot t = trikotFactory.erstelleTrikot("test", 7);
+        t.drucke();
+
     }
 }
