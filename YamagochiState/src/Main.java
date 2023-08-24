@@ -3,5 +3,6 @@ public class Main {
         Haustier haustier = new Haustier();
 
         haustier.getCurrentState().trainieren();
+        haustier.getCurrentState().spielen();
     }
 }

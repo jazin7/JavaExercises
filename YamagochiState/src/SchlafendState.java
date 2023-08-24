@@ -5,22 +5,22 @@ public class SchlafendState extends YamaState{
 
     @Override
     public void spielen() {
-        //TBD
-    }
-
-    @Override
-    public void fuettern() {
         haustier.changeState(new SchlechtGelauntState(haustier));
     }
 
     @Override
+    public void fuettern() {
+        haustier.changeState(new FroehlichState(haustier));
+    }
+
+    @Override
     public void trainieren() {
-        //TBD
+        haustier.changeState(new SchlechtGelauntState(haustier));
     }
 
     @Override
     public void nichtsTun() {
-        //TBD
+        haustier.changeState(new SchlafendState(haustier));
     }
 
     @Override

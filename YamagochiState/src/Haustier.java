@@ -1,6 +1,6 @@
 public class Haustier {
-    private int energie;
-    private int hunger;
+    private int energie = 5;
+    private int hunger = 1;
     private int training;
 
     private YamaState currentState;

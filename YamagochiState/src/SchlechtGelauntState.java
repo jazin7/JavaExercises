@@ -5,7 +5,17 @@ public class SchlechtGelauntState extends YamaState{
 
     @Override
     public void spielen() {
-        haustier.changeState(new FroehlichState(haustier));
+        if (haustier.getHunger() > 10){
+            haustier.changeState(new HungrigState(haustier));
+        }
+        else{
+            if (haustier.getEnergie() <= 0){
+                haustier.changeState(new SchlafendState(haustier));
+            }
+            else{
+                haustier.changeState(new FroehlichState(haustier));
+            }
+        }
     }
 
     @Override
@@ -15,12 +25,12 @@ public class SchlechtGelauntState extends YamaState{
 
     @Override
     public void trainieren() {
-        //TBD
+        System.out.println("Nicht möglich, da es schlecht gelaunt ist!");
     }
 
     @Override
     public void nichtsTun() {
-        //TBD
+        haustier.changeState(new SchlechtGelauntState(haustier));
     }
 
     @Override
