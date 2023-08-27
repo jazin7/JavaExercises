@@ -5,5 +5,9 @@ public class Main {
         Trikot t = trikotFactory.erstelleTrikot("test", 7);
         t.drucke();
 
+
+        GERTrikotFactory testo = new GERTrikotFactory();
+        testo.erstelleTrikot("asd", 55);
+
     }
 }
